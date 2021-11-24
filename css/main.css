@@ -1,0 +1,81 @@
+body {
+    background-color: green;
+}
+h1{
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    padding: 10px 0 10px 0;
+}
+/*--------メイン----------*/
+
+/*--------テーブル--------*/
+
+table{/*table全体*/
+    background-color: white;
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+table th {/*table内のthに対して*/
+  padding: 10px;
+}
+
+table td {/*table内のtdに対して*/
+  padding: 3px 10px;
+  height: 25px;
+  vertical-align: middle;
+}
+table th, table td {
+  border: solid 1px black;
+  /*実線 1px 黒*/
+}
+select{
+  width: 50px;
+  font-size: 1.5rem;
+}
+/*--馬の名前--*/
+.horse_name{/*td*/
+    font-weight: bold;
+}
+.horse_name_text{/*input*/
+outline: none;
+font-size: 1rem;
+font-weight: bold;
+text-align: center;
+}
+/*--馬の評価--*/
+/*
+.horse_performance{
+  
+}
+*/
+/*--枠の色--*/
+.waku_two{/*2枠*/
+background-color: #444444;
+color: white;
+}
+.waku_three{/*3枠*/
+background-color: #e95556;
+color: white;
+}
+.waku_four{/*4枠*/
+background-color: #416cba;
+color: white;
+}
+.waku_five{/*5枠*/
+background-color: #e7c52c;
+color: white;
+}
+.waku_six{/*6枠*/
+background-color: #45af4c;
+color: white;
+}
+.waku_seven{/*2枠*/
+background-color: #ee9738;
+color: white;
+}
+.waku_eight{/*2枠*/
+background-color: #ef8fa0;
+color: white;
+}
