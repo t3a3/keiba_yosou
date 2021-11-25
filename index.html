@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>競馬予想</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -13,23 +13,41 @@
 <body>
     <!------------ヘッダー------------>
     <header>
-        <h1>競馬予想</h1>
+        <h1>競馬予想共有アプリ</h1>
     </header>
+    <!------《記号の意味》のポップアップ内容------->
+    <div class="popup">
+        <div class="content">
+            <h2>《記号の意味》</h2>
+            <div>
+                <p>"&#9678;"=最も勝つ確率が高い馬。トップ評価。</p>
+                <p>"&#9711;"=本命に対抗できる馬。2番手評価。</p>
+                <p>"&#9650;"=&#9678;や&#9711;の馬に勝てる能力がある馬。3番手評価。</p>
+                <p>"&#9651;"=2・3着に来る可能性がある馬。。</p>
+                <p>"&#10025;"=上記以外で、勝てる可能性がある穴馬</p>
+            </div>
+            <button id="close">閉じる</button>
+        </div>
+    </div>
     <main>
+        <!------------レース名------------->
+        <div class="race_name_box">
+            <input type="text" style="border:none" class="race_name" id="race_name">
+        </div>
         <!------------競馬表------------->
         <table>
             <tr>
                 <th>枠番</th>
                 <th>馬番</th>
                 <th>出走馬</th>
-                <th>Aさん</th>
-                <th>Bさん</th>
-                <th>Cさん</th>
+                <th><input type="text" style="border:none" class="human_name"></th>
+                <th><input type="text" style="border:none" class="human_name"></th>
+                <th><input type="text" style="border:none" class="human_name"></th>
             </tr>
             <!-------1番------->
             <tr>
                 <!--枠番-->
-                <td>1</td>
+                <td class="waku_box"><select name="" class="waku"></select></td>
                 <!--馬番-->
                 <td>1</td>
                 <!--馬名-->
@@ -42,7 +60,7 @@
             <!-------2番------->
             <tr>
                 <!--枠番-->
-                <td>1</td>
+                <td class="waku_box"><select name="" class="waku"></select></td>
                 <!--馬番-->
                 <td>2</td>
                 <!--馬名-->
@@ -55,7 +73,7 @@
             <!--------3番------->
             <tr>
                 <!--枠番-->
-                <td class="waku_two">2</td>
+                <td class="waku_box"><select name="" class="waku"></select></td>
                 <!--馬番-->
                 <td>3</td>
                 <!--馬名-->
@@ -68,7 +86,7 @@
             <!-------4番------->
             <tr>
                 <!--枠番-->
-                <td class="waku_two">2</td>
+                <td class="waku_box"><select name="" class="waku"></select></td>
                 <!--馬番-->
                 <td>4</td>
                 <!--馬名-->
@@ -81,7 +99,7 @@
             <!-------5番------->
             <tr>
                 <!--枠番-->
-                <td class="waku_three">3</td>
+                <td class="waku_box"><select name="" class="waku"></select></td>
                 <!--馬番-->
                 <td>5</td>
                 <!--馬名-->
@@ -94,7 +112,7 @@
             <!--------6番------->
             <tr>
                 <!--枠番-->
-                <td class="waku_three">3</td>
+                <td class="waku_box"><select name="" class="waku"></select></td>
                 <!--馬番-->
                 <td>6</td>
                 <!--馬名-->
@@ -107,7 +125,7 @@
             <!-------7番------->
             <tr>
                 <!--枠番-->
-                <td class="waku_four">4</td>
+                <td class="waku_box"><select name="" class="waku"></select></td>
                 <!--馬番-->
                 <td>7</td>
                 <!--馬名-->
@@ -120,7 +138,7 @@
             <!-------8番------->
             <tr>
                 <!--枠番-->
-                <td class="waku_four">4</td>
+                <td class="waku_box"><select name="" class="waku"></select></td>
                 <!--馬番-->
                 <td>8</td>
                 <!--馬名-->
@@ -132,7 +150,7 @@
             </tr>
             <!-------9番------->
             <tr>
-                <td class="waku_five">5</td>
+                <td class="waku_box"><select name="" class="waku"></select></td>
                 <!--馬番-->
                 <td>9</td>
                 <!--馬名-->
@@ -144,7 +162,7 @@
             </tr>
             <!-------10番------->
             <tr>
-                <td class="waku_five">5</td>
+                <td class="waku_box"><select name="" class="waku"></select></td>
                 <!--馬番-->
                 <td>10</td>
                 <!--馬名-->
@@ -157,7 +175,7 @@
             <!--------11番------->
             <tr>
                 <!--枠番-->
-                <td class="waku_six">6</td>
+                <td class="waku_box"><select name="" class="waku"></select></td>
                 <!--馬番-->
                 <td>11</td>
                 <!--馬名-->
@@ -170,7 +188,7 @@
             <!-------12番------->
             <tr>
                 <!--枠番-->
-                <td class="waku_six">6</td>
+                <td class="waku_box"><select name="" class="waku"></select></td>
                 <!--馬番-->
                 <td>12</td>
                 <!--馬名-->
@@ -183,7 +201,7 @@
             <!-------13番------->
             <tr>
                 <!--枠番-->
-                <td class="waku_seven">7</td>
+                <td class="waku_box"><select name="" class="waku"></select></td>
                 <!--馬番-->
                 <td>13</td>
                 <!--馬名-->
@@ -196,7 +214,7 @@
             <!-------14番------->
             <tr>
                 <!--枠番-->
-                <td class="waku_seven">7</td>
+                <td class="waku_box"><select name="" class="waku"></select></td>
                 <!--馬番-->
                 <td>14</td>
                 <!--馬名-->
@@ -209,7 +227,7 @@
             <!-------15番------->
             <tr>
                 <!--枠番-->
-                <td class="waku_seven">7</td>
+                <td class="waku_box"><select name="" class="waku"></select></td>
                 <!--馬番-->
                 <td>15</td>
                 <!--馬名-->
@@ -222,7 +240,7 @@
             <!-------16番------->
             <tr>
                 <!--枠番-->
-                <td class="waku_eight">8</td>
+                <td class="waku_box"><select name="" class="waku"></select></td>
                 <!--馬番-->
                 <td>16</td>
                 <!--馬名-->
@@ -235,7 +253,7 @@
             <!-------17番------->
             <tr>
                 <!--枠番-->
-                <td class="waku_eight">8</td>
+                <td class="waku_box"><select name="" class="waku"></select></td>
                 <!--馬番-->
                 <td>17</td>
                 <!--馬名-->
@@ -248,7 +266,7 @@
             <!-------18番------->
             <tr>
                 <!--枠番-->
-                <td class="waku_eight">8</td>
+                <td class="waku_box"><select name="" class="waku"></select></td>
                 <!--馬番-->
                 <td>18</td>
                 <!--馬名-->
@@ -259,11 +277,15 @@
                 <td><select name="" class="horse_performance"></select></td>
             </tr>
         </table>
-        <button id="send">SAVE</button>
-        <button id="send2">SAVE2</button>
-        <button id="send3">SAVE3</button>
+        <!----------ボタン--------->
+        <div class="button_box">
+            <!--入力内容を保存しfirebaseに保存する-->
+            <button id="send" class="save_btn">保存</button>
+            <!--《記号の意味》をポップアップさせる-->
+            <button id="read_me" class="read_me">記号の意味</button>
+        </div>
     </main>
-
+    <!------------------↓↓↓javascript↓↓↓-------------------->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="module">
@@ -288,7 +310,7 @@
         };
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
-        //firestoreの配列を取得して反映
+        /////////////////firestoreの配列を取得して反映////////////////////
         onSnapshot(collection(db, "hyouka"), (querySnapshot) => {
             console.log(querySnapshot.docs);
             const dataArray = [];
@@ -300,77 +322,198 @@
                 dataArray.push(data);
             });
             console.log(dataArray);
+            //記号の配列をプッシュ
             const tagArray = [];
             dataArray[0].data.mark.forEach(function (data) {
                 tagArray.push(data);
             });
+            //人の名前をプッシュ
+            const humannameArray = [];
+            dataArray[0].data.human.forEach(function (data) {
+                humannameArray.push(data);
+            });
+            //馬の名前をプッシュ
             const nameArray = [];
             dataArray[0].data.name.forEach(function (data) {
                 nameArray.push(data);
             });
+            //枠番をプッシュ
+            const wakuArray = [];
+            dataArray[0].data.waku.forEach(function (data) {
+                wakuArray.push(data);
+            });
+            //レース名を宣言
+            const raceArray = dataArray[0].data.race_name
             console.log(tagArray);
             console.log(nameArray);
+            console.log(raceArray);
+            //記号を反映
             for (i = 0; i < 54; i++) {
                 $("#mark_box" + (i + 1)).val(tagArray[i]);
             };
-            for (i = 0; i < 18; i++) {
-                $("#name" + (i + 1)).val(nameArray[i]);
+            //人の名を反映
+            for (i = 0; i < 3; i++) {
+                $("#human_name" + (i + 1)).val(humannameArray[i]);
             };
+            //////////////////////////
+            for (i = 0; i < 18; i++) {
+                //馬の名前反映
+                $("#name" + (i + 1)).val(nameArray[i]);
+                //枠番とそれに対応した色を反映
+                $("#waku_number" + (i + 1)).val(wakuArray[i]);
+                if (wakuArray[i] === "") {
+                    $("#waku_box" + (i + 1)).css("background-color", "white");
+                }
+                else if (wakuArray[i] === "1") {
+                    $("#waku_box" + (i + 1)).css("background-color", "white");
+                }
+                else if (wakuArray[i] === "2") {
+                    $("#waku_box" + (i + 1)).css("background-color", "#444444");
+                }
+                else if (wakuArray[i] === "3") {
+                    $("#waku_box" + (i + 1)).css("background-color", "#e95556");
+                }
+                else if (wakuArray[i] === "4") {
+                    $("#waku_box" + (i + 1)).css("background-color", "#416cba");
+                }
+                else if (wakuArray[i] === "5") {
+                    $("#waku_box" + (i + 1)).css("background-color", "#e7c52c");
+                }
+                else if (wakuArray[i] === "6") {
+                    $("#waku_box" + (i + 1)).css("background-color", "#45af4c");
+                }
+                else if (wakuArray[i] === "7") {
+                    $("#waku_box" + (i + 1)).css("background-color", "#ee9738");
+                }
+                else if (wakuArray[i] === "8") {
+                    $("#waku_box" + (i + 1)).css("background-color", "#ef8fa0");
+                } else {
+                }
+            };
+            //レース名を反映
+            $("#race_name").val(raceArray);
         });
-        //SAVEボタンを押してFirebaseに送る
+        ////////////////SAVEボタンを押してFirebaseに送る///////////////////
         let hyouka_array = [];
+        let human_array = [];
         let name_array = [];
+        let waku_array = [];
         $("#send").on("click", function () {
+            //更新するfirebaseドキュメントの宣言
+            const washingtonRef = doc(db, "hyouka", "iH9yRx5xzGFRcbImn9OP")
+            //記号の配列
             hyouka_array = [];
             for (i = 0; i < 54; i++) {
                 hyouka_array.push($("#mark_box" + (i + 1)).val());
             };
-            console.log(hyouka_array);
-            const washingtonRef = doc(db, "hyouka", "iH9yRx5xzGFRcbImn9OP");
-            updateDoc(washingtonRef, {
-                mark: hyouka_array
-            });
+            //記号の配列
+            human_array = [];
+            for (i = 0; i < 3; i++) {
+                human_array.push($("#human_name" + (i + 1)).val());
+            };
+            //馬の名、枠番の配列
             name_array = [];
+            waku_array = [];
+            console.log(hyouka_array);
             for (i = 0; i < 18; i++) {
                 name_array.push($("#name" + (i + 1)).val());
+                waku_array.push($("#waku_number" + (i + 1)).val());
             };
             console.log(name_array);
+            //アップデートの処理
             updateDoc(washingtonRef, {
-                name: name_array
+                mark: hyouka_array,//記号
+                name: name_array,//馬の名前
+                waku: waku_array,//枠番
+                human: human_array,//人の名
+                race_name: $("#race_name").val()//レースの名前
             });
         });
-
-
-
     </script>
     <script>
         //class="horse_performance"があるタグにidを生成
         $("select.horse_performance").each(function (i) {
             $(this).attr("id", "mark_box" + (i + 1));
         });
-        //class="horse_performance"があるタグにidを生成
+        //class="human_name"があるタグにidを生成
+        $("input.human_name").each(function (i) {
+            $(this).attr("id", "human_name" + (i + 1));
+        });
+        //class="horse_name_text"があるタグにidを生成
         $("input.horse_name_text").each(function (i) {
             $(this).attr("id", "name" + (i + 1));
+        });
+        //class="waku"があるタグにidを生成
+        $("select.waku").each(function (i) {
+            $(this).attr("id", "waku_number" + (i + 1));
+        });
+        //class="waku_box"があるタグにidを生成
+        $("td.waku_box").each(function (i) {
+            $(this).attr("id", "waku_box" + (i + 1));
         });
         //評価記号の配列["",◎,〇,▲,△,☆]
         const list01 = ["", "&#9678;", "&#9711;", "&#9650;", "&#9651;", "&#10025;"];
         let array = [];
         for (let i = 0; i < list01.length; i++) {
             array.push("<option>" + list01[i] + "</option>");
-            console.log(array);
+            //console.log(array);
+        };
+        //枠番の配列
+        const list02 = ["", "1", "2", "3", "4", "5", "6", "7", "8"];
+        let wakuarray = [];
+        for (let i = 0; i < list02.length; i++) {
+            wakuarray.push("<option>" + list02[i] + "</option>");
+            //console.log(wakuarray);
         };
         //id="mark_box[i]"に評価記号の配列を適応させる
         for (i = 0; i < 54; i++) {
             $("#mark_box" + (i + 1)).html(array);
         };
-        //let hyouka_array = [];
-        //$("#send2").on("click", function () {
-        //    hyouka_array = [];
-        //    for (i = 0; i < 54; i++) {
-        //        hyouka_array.push($("#mark_box" + (i + 1)).val());
-        //    };
-        //    console.log(hyouka_array);
-        //});
+        //id="waku_number[i]"に評価記号の配列を適応させる
+        for (i = 0; i < 18; i++) {
+            $("#waku_number" + (i + 1)).html(wakuarray);
+        };
+        //枠番を変更した時に背景色追加
+        $('select').change(function () {
+            for (i = 0; i < 18; i++) {
+                if ($("#waku_number" + (i + 1)).val() === "") {
+                    $("#waku_box" + (i + 1)).css("background-color", "white");
+                }
+                else if ($("#waku_number" + (i + 1)).val() === "1") {
+                    $("#waku_box" + (i + 1)).css("background-color", "white");
+                }
+                else if ($("#waku_number" + (i + 1)).val() === "2") {
+                    $("#waku_box" + (i + 1)).css("background-color", "#444444");
+                }
+                else if ($("#waku_number" + (i + 1)).val() === "3") {
+                    $("#waku_box" + (i + 1)).css("background-color", "#e95556");
+                }
+                else if ($("#waku_number" + (i + 1)).val() === "4") {
+                    $("#waku_box" + (i + 1)).css("background-color", "#416cba");
+                }
+                else if ($("#waku_number" + (i + 1)).val() === "5") {
+                    $("#waku_box" + (i + 1)).css("background-color", "#e7c52c");
+                }
+                else if ($("#waku_number" + (i + 1)).val() === "6") {
+                    $("#waku_box" + (i + 1)).css("background-color", "#45af4c");
+                }
+                else if ($("#waku_number" + (i + 1)).val() === "7") {
+                    $("#waku_box" + (i + 1)).css("background-color", "#ee9738");
+                }
+                else if ($("#waku_number" + (i + 1)).val() === "8") {
+                    $("#waku_box" + (i + 1)).css("background-color", "#ef8fa0");
+                } else {
+                }
+            };
+        });
+        //readme内容表示
+        $('#read_me').on('click', function () {
+            $('.popup').addClass('show').fadeIn();
+        });
+        //readmeのポップアップを消す
+        $('#close').on('click', function () {
+            $('.popup').fadeOut();
+        });
     </script>
 </body>
 

@@ -1,5 +1,7 @@
 body {
     background-color: green;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
 h1{
     text-align: center;
@@ -7,7 +9,29 @@ h1{
     color: white;
     padding: 10px 0 10px 0;
 }
-/*--------メイン----------*/
+h2{
+  font-size: 1.5rem;
+}
+th{
+  background-color: lightsteelblue;
+}
+/*-------------------------------------------メイン---------------------------------------*/
+
+/*---------レース名---------*/
+.race_name_box{
+  text-align: center;
+  padding: 10px 0;
+  background-color: green;
+}
+.race_name{
+  width: 500px;
+  font-size: 1.5rem;
+  outline: none;
+  font-weight: bold;
+  text-align: center;
+  background-color: green;
+  color: white;
+}
 
 /*--------テーブル--------*/
 
@@ -34,6 +58,19 @@ select{
   width: 50px;
   font-size: 1.5rem;
 }
+/*--枠番--*/
+.waku{
+  text-align: center;
+}
+/*--人の名前--*/
+.human_name{/*th*/
+width: 50px;
+outline: none;
+font-size: 1rem;
+font-weight: bold;
+text-align: center;
+background-color: lightsteelblue;
+}
 /*--馬の名前--*/
 .horse_name{/*td*/
     font-weight: bold;
@@ -44,38 +81,53 @@ font-size: 1rem;
 font-weight: bold;
 text-align: center;
 }
-/*--馬の評価--*/
-/*
-.horse_performance{
-  
+
+/*--------保存ボタン--------*/
+.button_box{
+  text-align: center;
+  padding: 5px 0;
 }
-*/
-/*--枠の色--*/
-.waku_two{/*2枠*/
-background-color: #444444;
-color: white;
+button{
+  text-align: center;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
 }
-.waku_three{/*3枠*/
-background-color: #e95556;
-color: white;
+button:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
 }
-.waku_four{/*4枠*/
-background-color: #416cba;
-color: white;
+/*---------記号の意味<ポップアップ>--------*/
+.popup {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.466);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
-.waku_five{/*5枠*/
-background-color: #e7c52c;
-color: white;
+.content{
+    background: #fff;
+    color: #000000;
+    padding: 30px;
+    width: 50%;
 }
-.waku_six{/*6枠*/
-background-color: #45af4c;
-color: white;
+.content div{
+  font-size: 1.5rem;
+    padding: 10px 0;
 }
-.waku_seven{/*2枠*/
-background-color: #ee9738;
-color: white;
+.content div p{
+  text-align: left;
+  margin: 10px 10% 10px 10%;
 }
-.waku_eight{/*2枠*/
-background-color: #ef8fa0;
-color: white;
+.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
